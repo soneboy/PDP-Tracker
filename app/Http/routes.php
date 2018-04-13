@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'DashboardController@indexAction');
+Route::get('/login', 'LoginController@indexAction');
+Route::post('/login/submit', 'LoginController@submitAction');
+Route::get('/messages', 'MassagesController@indexAction');

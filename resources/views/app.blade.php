@@ -1,6 +1,8 @@
+@if(!Session::has('userId'))
+	<script>window.location = "/login";</script>
+@endif
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +19,6 @@
 	<!-- Custom styles for this template-->
 	<link href="css/sb-admin.css" rel="stylesheet">
 </head>
-
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -99,7 +100,7 @@
 						<div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
 					</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item small" href="#">View all messages</a>
+					<a class="dropdown-item small" href="/messages">View all messages</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
